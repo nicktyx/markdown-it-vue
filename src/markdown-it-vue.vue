@@ -37,6 +37,7 @@ import MarkdownItFlowchart from './markdown-it-plugin-flowchart'
 import MarkdownItHighlight from './markdown-it-highlight'
 import MarkdownItFontAwsome from './markdown-it-font-awsome'
 import MarkdownItImage from './markdown-it-image'
+import MarkdownItHtml5Media from 'markdown-it-html5-media'
 import 'github-markdown-css'
 import 'markdown-it-latex/dist/index.css'
 
@@ -168,6 +169,7 @@ export default {
       .use(MarkdownItFontAwsome)
       .use(MarkdownItGithubToc, optGithubToc)
       .use(MarkdownItImage, optImage)
+      .use(MarkdownItHtml5Media)
       .use(MarkdownItContainer, 'warning', {
         validate: function(params) {
           return params.trim() === 'warning'
